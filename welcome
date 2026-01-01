@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entra, amorzinho 😈</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-box {
+      margin-bottom: 24px;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(255, 0, 120, 0.4);
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #ff0055, #ff4d88);
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 0, 120, 0.6);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px rgba(255, 0, 120, 0.9);
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-box">
+      <img src="src/img/5168092228855991155.jpg" alt="Conteúdo exclusivo">
+    </div>
+
+    <h1>Oi, amorzinho… 😈</h1>
+    <p>Se você chegou até aqui, já sabe que não é por acaso.</p>
+
+    <a href="next.html" class="btn">
+      Quero continuar 🔥
+    </a>
+  </div>
+
+</body>
+</html>
