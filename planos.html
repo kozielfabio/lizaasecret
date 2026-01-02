@@ -1,105 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escolhe até onde quer ir 😈</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acesso Privado 😈</title>
 
-  <style>
-    *{
-      margin:0;padding:0;box-sizing:border-box;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif
-    }
-    body{
-      background:#000;color:#fff;min-height:100vh;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .wrap{
-      width:100%;max-width:420px;padding:22px;text-align:center;
-    }
-    .hero{
-      margin-bottom:18px;
-    }
-    .hero img{
-      width:100%;max-width:260px;border-radius:18px;
-      box-shadow:0 0 40px rgba(255,0,90,.45);
-      margin-bottom:12px;
-    }
-    h1{font-size:1.35rem;margin-bottom:6px}
-    .sub{font-size:.95rem;opacity:.85;margin-bottom:18px}
+<style>
+*{
+  margin:0;padding:0;box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
 
-    .plans{display:grid;grid-template-columns:1fr;gap:14px}
-    .card{
-      background:linear-gradient(180deg,#0f0f0f,#050505);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:16px;padding:16px;text-align:left;
-      box-shadow:0 0 22px rgba(0,0,0,.6);
-    }
-    .card.featured{
-      border-color:rgba(255,0,90,.7);
-      box-shadow:0 0 35px rgba(255,0,90,.55);
-    }
-    .tag{
-      display:inline-block;font-size:.75rem;padding:4px 8px;
-      border-radius:999px;background:#ff005a;font-weight:800;margin-bottom:8px;
-    }
-    .title{font-size:1.05rem;font-weight:800;margin-bottom:6px}
-    .desc{font-size:.9rem;opacity:.85;margin-bottom:10px}
-    .price{font-size:1.6rem;font-weight:900;margin-bottom:10px}
-    .btn{
-      display:block;width:100%;padding:14px;text-align:center;
-      background:linear-gradient(135deg,#ff005a,#ff3d7f);
-      color:#fff;text-decoration:none;font-weight:900;
-      border-radius:12px;
-      box-shadow:0 0 26px rgba(255,0,90,.7);
-      transition:transform .15s ease, box-shadow .15s ease;
-    }
-    .btn:hover{transform:scale(1.03);box-shadow:0 0 40px rgba(255,0,90,.95)}
-    .foot{margin-top:14px;font-size:.8rem;opacity:.6}
-  </style>
+body{
+  background:radial-gradient(circle at top,#0a0a0a,#000 70%);
+  color:#fff;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.wrap{
+  width:100%;
+  max-width:360px;
+  padding:20px;
+  text-align:center;
+}
+
+/* VIDEO */
+.media{
+  margin-bottom:18px;
+  position:relative;
+}
+.media::after{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(255,0,90,.35),transparent 70%);
+  filter:blur(20px);
+  z-index:-1;
+}
+.media video{
+  width:100%;
+  max-width:220px;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 0 40px rgba(255,0,90,.55);
+}
+
+/* TEXTOS */
+h1{
+  font-size:1.35rem;
+  margin-bottom:8px;
+}
+.sub{
+  font-size:.9rem;
+  opacity:.85;
+  margin-bottom:16px;
+}
+.sub span{color:#ff2f7d;font-weight:700}
+
+.copy{
+  font-size:.95rem;
+  line-height:1.45;
+  opacity:.9;
+  margin-bottom:22px;
+}
+
+/* PLANOS */
+.plan{
+  background:#0b0b0b;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 0 25px rgba(0,0,0,.6);
+}
+.plan.popular{
+  border:2px solid #ff2f7d;
+  box-shadow:0 0 35px rgba(255,0,90,.45);
+}
+.plan h2{
+  font-size:1.05rem;
+  margin-bottom:6px;
+}
+.price{
+  font-size:1.45rem;
+  font-weight:900;
+  margin-bottom:6px;
+}
+.price span{
+  font-size:.8rem;
+  font-weight:500;
+  opacity:.7;
+}
+.desc{
+  font-size:.8rem;
+  opacity:.8;
+  margin-bottom:12px;
+}
+
+/* CTA */
+.cta{
+  display:block;
+  width:100%;
+  padding:14px;
+  background:linear-gradient(135deg,#ff004f,#ff3d7f);
+  color:#fff;
+  text-decoration:none;
+  font-size:1rem;
+  font-weight:900;
+  border-radius:12px;
+  box-shadow:0 0 28px rgba(255,0,90,.75);
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.04)}
+  100%{transform:scale(1)}
+}
+
+.badge{
+  display:inline-block;
+  margin-bottom:8px;
+  padding:4px 10px;
+  font-size:.65rem;
+  border-radius:999px;
+  background:#ff2f7d;
+  font-weight:800;
+}
+
+.footer{
+  margin-top:14px;
+  font-size:.7rem;
+  opacity:.5;
+}
+
+/* DESKTOP */
+@media (min-width:768px){
+  .wrap{max-width:420px}
+  .media video{max-width:260px}
+}
+</style>
 </head>
+
 <body>
 
-  <div class="wrap">
-    <div class="hero">
-      <img src="src/img/5168092228855991155.jpg" alt="Amorzinho">
-      <h1>Escolhe com calma, amorzinho… 😈</h1>
-      <div class="sub">Quanto mais você entra, mais difícil fica sair.</div>
-    </div>
+<div class="wrap">
 
-    <div class="plans">
-      <div class="card">
-        <div class="title">Primeiro passo</div>
-        <div class="desc">Só pra sentir o clima.</div>
-        <div class="price">R$ 7,90</div>
-        <a href="#" class="btn">Quero esse 🔥</a>
-      </div>
-
-      <div class="card">
-        <div class="title">Provocação</div>
-        <div class="desc">Já dá pra se perder um pouco.</div>
-        <div class="price">R$ 19,90</div>
-        <a href="#" class="btn">Entrar agora 😈</a>
-      </div>
-
-      <div class="card featured">
-        <span class="tag">Mais escolhido</span>
-        <div class="title">Sem limite</div>
-        <div class="desc">Quando curiosidade vira vontade.</div>
-        <div class="price">R$ 27,90</div>
-        <a href="#" class="btn">Quero tudo 💣</a>
-      </div>
-
-      <div class="card">
-        <div class="title">Total</div>
-        <div class="desc">Pra quem não gosta de parar.</div>
-        <div class="price">R$ 47,90</div>
-        <a href="#" class="btn">Acesso completo 💸</a>
-      </div>
-    </div>
-
-    <div class="foot">Acesso imediato • Conteúdo exclusivo • Privado</div>
+  <div class="media">
+    <video
+      src="src/img/IMG_5850.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata">
+    </video>
   </div>
+
+  <h1>Acesso Privado 😈</h1>
+  <div class="sub">
+    Conteúdo <span>reservado</span> • Ambiente fechado • Sem censura social
+  </div>
+
+  <div class="copy">
+    Oii meu bem, sou a Liza<br>
+    (ou pode me chamar de sua putinha kkkk), atualmente to morando em São Paulo vendendo aquilo que todo mundo quer ver de uma nifeta<br>
+    O que eu já gravei que tem no vip:<br>
+    ✅ Anal de c# apertado 😈
+✅ Esguicho
+✅ Gozando dentro 💦
+✅ 69
+✅ Foto do Pé
+✅ Pagando babão até o finalzinho 💦
+✅ Usando plug em publico
+✅ No banheiro da facul
+✅ Trisal 👀<br><br>
+    Quero ser bem direta to aqui pra te fazer gozar
+  </div>
+
+  <div class="plan popular">
+    <div class="badge">MAIS ESCOLHIDO</div>
+    <h2>Acesso Completo</h2>
+    <div class="price">R$ 40,00 <span>/ acesso total</span></div>
+    <div class="desc">
+      Mais de 300 vídeos<br>
+      Fotos privadas<br>
+      Sem limite • Sem enrolação
+    </div>
+    <a href="#" class="cta">Quero tudo 🔥</a>
+  </div>
+
+  <div class="plan">
+    <h2>Acesso Intermediário</h2>
+    <div class="price">R$ 19,25 <span>/ conteúdo intenso</span></div>
+    <div class="desc">
+      Seleção especial<br>
+      Momentos exclusivos<br>
+      Pra quem quer mais
+    </div>
+    <a href="#" class="cta">Entrar agora 🔓</a>
+  </div>
+
+  <div class="plan">
+    <h2>Acesso Inicial</h2>
+    <div class="price">R$ 9,87 <span>/ só pra sentir</span></div>
+    <div class="desc">
+      Primeiros conteúdos<br>
+      Clima privado<br>
+      Degustação
+    </div>
+    <a href="#" class="cta">Experimentar 😈</a>
+  </div>
+
+  <div class="footer">
+    +18 • Conteúdo adulto • Ambiente privado<br>
+    Entre por sua conta e risco
+  </div>
+
+</div>
 
 </body>
 </html>
