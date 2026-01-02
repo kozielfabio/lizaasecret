@@ -10,16 +10,12 @@
   margin:0;padding:0;box-sizing:border-box;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 }
-
 body{
   background:radial-gradient(circle at top,#0a0a0a,#000 70%);
   color:#fff;
   min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display:flex;align-items:center;justify-content:center;
 }
-
 .wrap{
   width:100%;
   max-width:360px;
@@ -27,156 +23,129 @@ body{
   text-align:center;
 }
 
-/* VIDEO */
+/* HERO VIDEO */
 .media{
-  margin-bottom:18px;
-  position:relative;
+  margin-bottom:14px;position:relative;
 }
 .media::after{
-  content:"";
-  position:absolute;
-  inset:-8px;
-  border-radius:18px;
+  content:"";position:absolute;inset:-8px;border-radius:18px;
   background:linear-gradient(135deg,rgba(255,0,90,.35),transparent 70%);
-  filter:blur(20px);
-  z-index:-1;
+  filter:blur(20px);z-index:-1;
 }
 .media video{
-  width:100%;
-  max-width:220px;
+  width:100%;max-width:220px;border-radius:14px;
+  object-fit:cover;box-shadow:0 0 40px rgba(255,0,90,.55);
+}
+
+/* SWIPE HORIZONTAL */
+.carousel{
+  margin:18px 0 22px;
+  overflow-x:auto;
+  display:flex;gap:12px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:6px;
+}
+.carousel::-webkit-scrollbar{display:none}
+
+/* ITEM */
+.card{
+  min-width:150px;max-width:150px;
+  height:220px;
   border-radius:14px;
-  object-fit:cover;
-  box-shadow:0 0 40px rgba(255,0,90,.55);
+  background:#0b0b0b;
+  box-shadow:0 0 25px rgba(255,0,90,.25);
+  scroll-snap-align:start;
+  opacity:0;transform:translateY(24px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.card.show{opacity:1;transform:none}
+.card video,.card img{
+  width:100%;height:100%;
+  object-fit:cover;border-radius:14px;
 }
 
 /* TEXTOS */
-h1{
-  font-size:1.35rem;
-  margin-bottom:8px;
-}
-.sub{
-  font-size:.9rem;
-  opacity:.85;
-  margin-bottom:16px;
-}
+h1{font-size:1.35rem;margin-bottom:8px}
+.sub{font-size:.9rem;opacity:.85;margin-bottom:16px}
 .sub span{color:#ff2f7d;font-weight:700}
-
-.copy{
-  font-size:.95rem;
-  line-height:1.45;
-  opacity:.9;
-  margin-bottom:22px;
-}
+.copy{font-size:.95rem;line-height:1.45;opacity:.9;margin-bottom:22px}
 
 /* PLANOS */
 .plan{
-  background:#0b0b0b;
-  border-radius:16px;
-  padding:16px;
-  margin-bottom:14px;
+  background:#0b0b0b;border-radius:16px;padding:16px;margin-bottom:14px;
   box-shadow:0 0 25px rgba(0,0,0,.6);
 }
 .plan.popular{
   border:2px solid #ff2f7d;
   box-shadow:0 0 35px rgba(255,0,90,.45);
 }
-.plan h2{
-  font-size:1.05rem;
-  margin-bottom:6px;
-}
-.price{
-  font-size:1.45rem;
-  font-weight:900;
-  margin-bottom:6px;
-}
-.price span{
-  font-size:.8rem;
-  font-weight:500;
-  opacity:.7;
-}
-.desc{
-  font-size:.8rem;
-  opacity:.8;
-  margin-bottom:12px;
-}
+.plan h2{font-size:1.05rem;margin-bottom:6px}
+.price{font-size:1.45rem;font-weight:900;margin-bottom:6px}
+.price span{font-size:.8rem;font-weight:500;opacity:.7}
+.desc{font-size:.8rem;opacity:.8;margin-bottom:12px}
 
 /* CTA */
 .cta{
-  display:block;
-  width:100%;
-  padding:14px;
+  display:block;width:100%;padding:14px;
   background:linear-gradient(135deg,#ff004f,#ff3d7f);
-  color:#fff;
-  text-decoration:none;
-  font-size:1rem;
-  font-weight:900;
-  border-radius:12px;
-  box-shadow:0 0 28px rgba(255,0,90,.75);
+  color:#fff;text-decoration:none;font-size:1rem;font-weight:900;
+  border-radius:12px;box-shadow:0 0 28px rgba(255,0,90,.75);
   animation:pulse 1.6s infinite;
 }
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.04)}
-  100%{transform:scale(1)}
-}
-
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
 .badge{
-  display:inline-block;
-  margin-bottom:8px;
-  padding:4px 10px;
-  font-size:.65rem;
-  border-radius:999px;
-  background:#ff2f7d;
-  font-weight:800;
+  display:inline-block;margin-bottom:8px;padding:4px 10px;
+  font-size:.65rem;border-radius:999px;background:#ff2f7d;font-weight:800;
 }
-
-.footer{
-  margin-top:14px;
-  font-size:.7rem;
-  opacity:.5;
-}
+.footer{margin-top:14px;font-size:.7rem;opacity:.5}
 
 /* DESKTOP */
 @media (min-width:768px){
   .wrap{max-width:420px}
   .media video{max-width:260px}
+  .card{min-width:170px;max-width:170px;height:240px}
 }
 </style>
 </head>
 
 <body>
-
 <div class="wrap">
 
+  <!-- HERO -->
   <div class="media">
-    <video
-      src="src/img/IMG_5850.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata">
-    </video>
+    <video src="src/img/IMG_5850.mp4" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+
+  <!-- SWIPE GRID (3 MÍDIAS) -->
+  <div class="carousel">
+    <div class="card reveal">
+      <video src="src/img/IMG_7758.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    </div>
+    <div class="card reveal">
+      <video src="src/img/IMG_5850.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    </div>
+    <div class="card reveal">
+      <img src="src/img/5168092228855991155.jpg" alt="preview">
+    </div>
   </div>
 
   <h1>Acesso Privado 😈</h1>
-  <div class="sub">
-    Conteúdo <span>reservado</span> • Ambiente fechado • Sem censura social
-  </div>
+  <div class="sub">Conteúdo <span>reservado</span> • Ambiente fechado • Sem censura social</div>
 
   <div class="copy">
     Oii meu bem, sou a Liza<br>
     (ou pode me chamar de sua putinha kkkk), atualmente to morando em São Paulo vendendo aquilo que todo mundo quer ver de uma nifeta<br>
     O que eu já gravei que tem no vip:<br>
-    ✅ Anal de c# apertado 😈
-✅ Esguicho
-✅ Gozando dentro 💦
-✅ 69
-✅ Foto do Pé
-✅ Pagando babão até o finalzinho 💦
-✅ Usando plug em publico
-✅ No banheiro da facul
-✅ Trisal 👀<br><br>
+    ✅ Anal de c# apertado 😈<br>
+    ✅ Esguicho<br>
+    ✅ Gozando dentro 💦<br>
+    ✅ 69<br>
+    ✅ Foto do Pé<br>
+    ✅ Pagando babão até o finalzinho 💦<br>
+    ✅ Usando plug em publico<br>
+    ✅ No banheiro da facul<br>
+    ✅ Trisal 👀<br><br>
     Quero ser bem direta to aqui pra te fazer gozar
   </div>
 
@@ -184,42 +153,37 @@ h1{
     <div class="badge">MAIS ESCOLHIDO</div>
     <h2>Acesso Completo</h2>
     <div class="price">R$ 40,00 <span>/ acesso total</span></div>
-    <div class="desc">
-      Mais de 300 vídeos<br>
-      Fotos privadas<br>
-      Sem limite • Sem enrolação
-    </div>
+    <div class="desc">Mais de 300 vídeos<br>Fotos privadas<br>Sem limite • Sem enrolação</div>
     <a href="#" class="cta">Quero tudo 🔥</a>
   </div>
 
   <div class="plan">
     <h2>Acesso Intermediário</h2>
     <div class="price">R$ 19,25 <span>/ conteúdo intenso</span></div>
-    <div class="desc">
-      Seleção especial<br>
-      Momentos exclusivos<br>
-      Pra quem quer mais
-    </div>
+    <div class="desc">Seleção especial<br>Momentos exclusivos<br>Pra quem quer mais</div>
     <a href="#" class="cta">Entrar agora 🔓</a>
   </div>
 
   <div class="plan">
     <h2>Acesso Inicial</h2>
     <div class="price">R$ 9,87 <span>/ só pra sentir</span></div>
-    <div class="desc">
-      Primeiros conteúdos<br>
-      Clima privado<br>
-      Degustação
-    </div>
+    <div class="desc">Primeiros conteúdos<br>Clima privado<br>Degustação</div>
     <a href="#" class="cta">Experimentar 😈</a>
   </div>
 
-  <div class="footer">
-    +18 • Conteúdo adulto • Ambiente privado<br>
-    Entre por sua conta e risco
-  </div>
+  <div class="footer">+18 • Conteúdo adulto • Ambiente privado<br>Entre por sua conta e risco</div>
 
 </div>
+
+<script>
+/* APARECE DEPOIS DO SCROLL */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('show');
+  });
+},{threshold:.2});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
 
 </body>
 </html>
