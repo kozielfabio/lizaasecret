@@ -6,86 +6,112 @@
 <title>Chega mais… 😈</title>
 
 <style>
+/* RESET */
 *{
-  margin:0;padding:0;box-sizing:border-box;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 }
+
+/* BASE MOBILE FIRST */
 body{
-  background:radial-gradient(circle at top,#0a0a0a,#000 70%);
+  background:#000;
   color:#fff;
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
 }
+
 .wrap{
   width:100%;
-  max-width:420px;
-  padding:26px;
+  max-width:360px; /* mobile real */
+  padding:20px;
   text-align:center;
 }
+
+/* VIDEO */
 .media{
-  margin-bottom:22px;
+  margin-bottom:20px;
   position:relative;
 }
+
 .media::after{
   content:"";
   position:absolute;
-  inset:-10px;
-  border-radius:22px;
-  background:linear-gradient(135deg,rgba(255,0,90,.35),transparent 60%);
-  filter:blur(25px);
+  inset:-8px;
+  border-radius:20px;
+  background:linear-gradient(135deg,rgba(255,0,90,.35),transparent 70%);
+  filter:blur(22px);
   z-index:-1;
 }
+
 .media video{
   width:100%;
-  max-width:330px;
-  border-radius:18px;
+  max-width:240px; /* MOBILE PERFEITO */
+  border-radius:16px;
   object-fit:cover;
-  box-shadow:0 0 60px rgba(255,0,90,.55);
+  box-shadow:0 0 45px rgba(255,0,90,.55);
 }
+
+/* TEXTO */
 h1{
-  font-size:1.45rem;
-  margin-bottom:12px;
+  font-size:1.3rem;
+  margin-bottom:10px;
   letter-spacing:.3px;
 }
+
 p{
-  font-size:1.02rem;
-  line-height:1.5;
+  font-size:0.95rem;
+  line-height:1.45;
   opacity:.9;
-  margin-bottom:26px;
+  margin-bottom:22px;
 }
+
 p span{
   color:#ff2f7d;
   font-weight:700;
 }
+
+/* CTA */
 .cta{
   display:block;
   width:100%;
-  padding:18px;
+  padding:16px;
   background:linear-gradient(135deg,#ff004f,#ff3d7f);
   color:#fff;
   text-decoration:none;
-  font-size:1.1rem;
+  font-size:1.05rem;
   font-weight:900;
-  border-radius:16px;
-  box-shadow:0 0 35px rgba(255,0,90,.8);
+  border-radius:14px;
+  box-shadow:0 0 30px rgba(255,0,90,.8);
   animation:pulse 1.6s infinite;
 }
+
 @keyframes pulse{
   0%{transform:scale(1)}
   50%{transform:scale(1.04)}
   100%{transform:scale(1)}
 }
+
 .hint{
-  margin-top:14px;
-  font-size:.8rem;
+  margin-top:12px;
+  font-size:.75rem;
   opacity:.6;
 }
+
 .warning{
-  margin-top:18px;
+  margin-top:14px;
   font-size:.7rem;
   opacity:.45;
+}
+
+/* DESKTOP AJUSTE (SEM ESTRAGAR MOBILE) */
+@media (min-width:768px){
+  .wrap{max-width:420px}
+  .media video{max-width:280px}
+  h1{font-size:1.45rem}
 }
 </style>
 </head>
@@ -105,18 +131,17 @@ p span{
     </video>
   </div>
 
-  <h1>Chega mais… sem pressa 😈</h1>
+  <h1>Chega mais… devagar 😈</h1>
 
   <p>
-    Olha direito.<br>
+    Olha sem pressa.<br>
     Sente o clima.<br>
-    <span>Nem tudo é pra explicar.</span><br>
-    Algumas coisas são pra deixar acontecer.
+    <span>Tem coisa que é melhor sentir do que entender.</span>
   </p>
 
-  <a href="planos.html" class="cta">Quero ir mais fundo 🔥</a>
+  <a href="planos.html" class="cta">Quero continuar 🔥</a>
 
-  <div class="hint">Acesso reservado • Conteúdo intenso</div>
+  <div class="hint">Acesso imediato • Conteúdo reservado</div>
   <div class="warning">+18 • Entre por sua conta e risco</div>
 
 </div>
