@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolhe até onde quer ir 😈</title>
+
+  <style>
+    *{
+      margin:0;padding:0;box-sizing:border-box;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif
+    }
+    body{
+      background:#000;color:#fff;min-height:100vh;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .wrap{
+      width:100%;max-width:420px;padding:22px;text-align:center;
+    }
+    .hero{
+      margin-bottom:18px;
+    }
+    .hero img{
+      width:100%;max-width:260px;border-radius:18px;
+      box-shadow:0 0 40px rgba(255,0,90,.45);
+      margin-bottom:12px;
+    }
+    h1{font-size:1.35rem;margin-bottom:6px}
+    .sub{font-size:.95rem;opacity:.85;margin-bottom:18px}
+
+    .plans{display:grid;grid-template-columns:1fr;gap:14px}
+    .card{
+      background:linear-gradient(180deg,#0f0f0f,#050505);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;padding:16px;text-align:left;
+      box-shadow:0 0 22px rgba(0,0,0,.6);
+    }
+    .card.featured{
+      border-color:rgba(255,0,90,.7);
+      box-shadow:0 0 35px rgba(255,0,90,.55);
+    }
+    .tag{
+      display:inline-block;font-size:.75rem;padding:4px 8px;
+      border-radius:999px;background:#ff005a;font-weight:800;margin-bottom:8px;
+    }
+    .title{font-size:1.05rem;font-weight:800;margin-bottom:6px}
+    .desc{font-size:.9rem;opacity:.85;margin-bottom:10px}
+    .price{font-size:1.6rem;font-weight:900;margin-bottom:10px}
+    .btn{
+      display:block;width:100%;padding:14px;text-align:center;
+      background:linear-gradient(135deg,#ff005a,#ff3d7f);
+      color:#fff;text-decoration:none;font-weight:900;
+      border-radius:12px;
+      box-shadow:0 0 26px rgba(255,0,90,.7);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover{transform:scale(1.03);box-shadow:0 0 40px rgba(255,0,90,.95)}
+    .foot{margin-top:14px;font-size:.8rem;opacity:.6}
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="hero">
+      <img src="src/img/5168092228855991155.jpg" alt="Amorzinho">
+      <h1>Escolhe com calma, amorzinho… 😈</h1>
+      <div class="sub">Quanto mais você entra, mais difícil fica sair.</div>
+    </div>
+
+    <div class="plans">
+      <div class="card">
+        <div class="title">Primeiro passo</div>
+        <div class="desc">Só pra sentir o clima.</div>
+        <div class="price">R$ 7,90</div>
+        <a href="#" class="btn">Quero esse 🔥</a>
+      </div>
+
+      <div class="card">
+        <div class="title">Provocação</div>
+        <div class="desc">Já dá pra se perder um pouco.</div>
+        <div class="price">R$ 19,90</div>
+        <a href="#" class="btn">Entrar agora 😈</a>
+      </div>
+
+      <div class="card featured">
+        <span class="tag">Mais escolhido</span>
+        <div class="title">Sem limite</div>
+        <div class="desc">Quando curiosidade vira vontade.</div>
+        <div class="price">R$ 27,90</div>
+        <a href="#" class="btn">Quero tudo 💣</a>
+      </div>
+
+      <div class="card">
+        <div class="title">Total</div>
+        <div class="desc">Pra quem não gosta de parar.</div>
+        <div class="price">R$ 47,90</div>
+        <a href="#" class="btn">Acesso completo 💸</a>
+      </div>
+    </div>
+
+    <div class="foot">Acesso imediato • Conteúdo exclusivo • Privado</div>
+  </div>
+
+</body>
+</html>

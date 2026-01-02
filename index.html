@@ -3,93 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entra, amorzinho 😈</title>
+  <title>Chega mais, amorzinho 😈</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    body{
+      background:#000;color:#fff;min-height:100vh;
+      display:flex;align-items:center;justify-content:center;
     }
-
-    body {
-      background: #0b0b0b;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .wrap{width:100%;max-width:420px;padding:22px;text-align:center}
+    .media{margin-bottom:18px}
+    .media video{
+      width:100%;max-width:320px;border-radius:18px;
+      box-shadow:0 0 45px rgba(255,0,90,.45);
+      object-fit:cover;
     }
-
-    .container {
-      width: 100%;
-      max-width: 420px;
-      padding: 20px;
-      text-align: center;
+    h1{font-size:1.35rem;margin-bottom:10px}
+    p{font-size:1rem;line-height:1.45;opacity:.9;margin-bottom:22px}
+    .cta{
+      display:block;width:100%;padding:16px;
+      background:linear-gradient(135deg,#ff004f,#ff3d7f);
+      color:#fff;text-decoration:none;font-size:1.05rem;font-weight:800;
+      border-radius:14px;box-shadow:0 0 30px rgba(255,0,90,.7);
+      transition:transform .15s ease, box-shadow .15s ease;
     }
-
-    .image-box {
-      margin-bottom: 24px;
-    }
-
-    .image-box img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 16px;
-      box-shadow: 0 0 40px rgba(255, 0, 120, 0.4);
-    }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-    }
-
-    p {
-      font-size: 1rem;
-      opacity: 0.85;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      background: linear-gradient(135deg, #ff0055, #ff4d88);
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(255, 0, 120, 0.6);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .btn:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 40px rgba(255, 0, 120, 0.9);
-    }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-    }
+    .cta:hover{transform:scale(1.03);box-shadow:0 0 45px rgba(255,0,90,.95)}
+    .hint{margin-top:12px;font-size:.85rem;opacity:.6}
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="image-box">
-      <img src="src/img/5168092228855991155.jpg" alt="Conteúdo exclusivo">
+  <div class="wrap">
+    <div class="media">
+      <video
+        src="src/img/IMG_1172.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata">
+      </video>
     </div>
 
-    <h1>Oi, amorzinho… 😈</h1>
-    <p>Se você chegou até aqui, já sabe que não é por acaso.</p>
+    <h1>Chega mais, amorzinho… 😈</h1>
+    <p>
+      Olha com calma.<br>
+      Deixa rolar.<br>
+      Tem coisa que não se explica — se sente.
+    </p>
 
-    <a href="next.html" class="btn">
-      Quero continuar 🔥
-    </a>
+    <a href="planos.html" class="cta">Quero continuar 🔥</a>
+    <div class="hint">Conteúdo exclusivo • Acesso imediato</div>
   </div>
 
 </body>
