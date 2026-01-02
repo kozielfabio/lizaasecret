@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chega mais, amorzinho 😈</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chega mais… 😈</title>
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-    body{
-      background:#000;color:#fff;min-height:100vh;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .wrap{width:100%;max-width:420px;padding:22px;text-align:center}
-    .media{margin-bottom:18px}
-    .media video{
-      width:100%;max-width:320px;border-radius:18px;
-      box-shadow:0 0 45px rgba(255,0,90,.45);
-      object-fit:cover;
-    }
-    h1{font-size:1.35rem;margin-bottom:10px}
-    p{font-size:1rem;line-height:1.45;opacity:.9;margin-bottom:22px}
-    .cta{
-      display:block;width:100%;padding:16px;
-      background:linear-gradient(135deg,#ff004f,#ff3d7f);
-      color:#fff;text-decoration:none;font-size:1.05rem;font-weight:800;
-      border-radius:14px;box-shadow:0 0 30px rgba(255,0,90,.7);
-      transition:transform .15s ease, box-shadow .15s ease;
-    }
-    .cta:hover{transform:scale(1.03);box-shadow:0 0 45px rgba(255,0,90,.95)}
-    .hint{margin-top:12px;font-size:.85rem;opacity:.6}
-  </style>
+<style>
+*{
+  margin:0;padding:0;box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif
+}
+body{
+  background:radial-gradient(circle at top,#0a0a0a,#000 70%);
+  color:#fff;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.wrap{
+  width:100%;
+  max-width:420px;
+  padding:26px;
+  text-align:center;
+}
+.media{
+  margin-bottom:22px;
+  position:relative;
+}
+.media::after{
+  content:"";
+  position:absolute;
+  inset:-10px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(255,0,90,.35),transparent 60%);
+  filter:blur(25px);
+  z-index:-1;
+}
+.media video{
+  width:100%;
+  max-width:330px;
+  border-radius:18px;
+  object-fit:cover;
+  box-shadow:0 0 60px rgba(255,0,90,.55);
+}
+h1{
+  font-size:1.45rem;
+  margin-bottom:12px;
+  letter-spacing:.3px;
+}
+p{
+  font-size:1.02rem;
+  line-height:1.5;
+  opacity:.9;
+  margin-bottom:26px;
+}
+p span{
+  color:#ff2f7d;
+  font-weight:700;
+}
+.cta{
+  display:block;
+  width:100%;
+  padding:18px;
+  background:linear-gradient(135deg,#ff004f,#ff3d7f);
+  color:#fff;
+  text-decoration:none;
+  font-size:1.1rem;
+  font-weight:900;
+  border-radius:16px;
+  box-shadow:0 0 35px rgba(255,0,90,.8);
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.04)}
+  100%{transform:scale(1)}
+}
+.hint{
+  margin-top:14px;
+  font-size:.8rem;
+  opacity:.6;
+}
+.warning{
+  margin-top:18px;
+  font-size:.7rem;
+  opacity:.45;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="wrap">
-    <div class="media">
-      <video
-        src="src/img/IMG_1172.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata">
-      </video>
-    </div>
+<div class="wrap">
 
-    <h1>Chega mais, amorzinho… 😈</h1>
-    <p>
-      Olha com calma.<br>
-      Deixa rolar.<br>
-      Tem coisa que não se explica — se sente.
-    </p>
-
-    <a href="planos.html" class="cta">Quero continuar 🔥</a>
-    <div class="hint">Conteúdo exclusivo • Acesso imediato</div>
+  <div class="media">
+    <video
+      src="src/img/IMG_1172.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata">
+    </video>
   </div>
+
+  <h1>Chega mais… sem pressa 😈</h1>
+
+  <p>
+    Olha direito.<br>
+    Sente o clima.<br>
+    <span>Nem tudo é pra explicar.</span><br>
+    Algumas coisas são pra deixar acontecer.
+  </p>
+
+  <a href="planos.html" class="cta">Quero ir mais fundo 🔥</a>
+
+  <div class="hint">Acesso reservado • Conteúdo intenso</div>
+  <div class="warning">+18 • Entre por sua conta e risco</div>
+
+</div>
 
 </body>
 </html>
